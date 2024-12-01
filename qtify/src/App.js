@@ -9,6 +9,7 @@ import {
   fetchNewAlbums,
   fetchSongs,
   fetchTopAlbums,
+  fetchFAndQs
 } from "./api/api";
 
 function App() {
@@ -35,9 +36,13 @@ function App() {
     generateData("newAlbums", fetchNewAlbums);
     generateData("songs", fetchSongs);
     generateData("genres", fetchFilters);
+    generateData("FandQs", fetchFAndQs);
+    
   }, []);
 
-  const { topAlbums = [], newAlbums = [], songs = [], genres = [] } = data;
+  const { topAlbums = [], newAlbums = [], songs = [], genres = [], FandQs = [] } = data;
+
+  console.log("FandQs",FandQs);
 
   return (
     <>

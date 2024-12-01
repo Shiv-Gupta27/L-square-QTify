@@ -4,12 +4,13 @@ import { fetchFilters } from "../../api/api";
 import Hero from "../../Components/Hero/Hero";
 import Section from "../../Components/Section/Section";
 import styles from "./HomePage.module.css";
+import FandQAccordion from "../../Components/FandQAccordion/FandQAccordion"
 
 export default function HomePage() {
   const { data } = useOutletContext();
-  const { newAlbums, topAlbums, songs, genres } = data;
+  const { newAlbums, topAlbums, songs, genres, FandQs } = data;
 
-  console.log("genres", genres);
+  // console.log("FandQs", FandQs);
 
   return (
     <>
@@ -24,6 +25,7 @@ export default function HomePage() {
           type="song"
         />
       </div>
+      <FandQAccordion FandQs = {FandQs} />
     </>
   );
 }

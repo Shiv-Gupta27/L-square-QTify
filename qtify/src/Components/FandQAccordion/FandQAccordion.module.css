@@ -1,0 +1,17 @@
+.AllignItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.size {
+    width: 80%;
+    border: 1px solid var(--color-white);
+    border-radius: 10px;
+}
+
+.question {
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
