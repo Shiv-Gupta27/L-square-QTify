@@ -10,7 +10,8 @@ export default function HomePage() {
   const { data } = useOutletContext();
   const { newAlbums, topAlbums, songs, genres, FandQs } = data;
 
-  // console.log("FandQs", FandQs);
+  console.log("FandQs from homepage", FandQs);
+  console.log("topAlbums from homepage", topAlbums);
 
   return (
     <>
@@ -25,7 +26,7 @@ export default function HomePage() {
           type="song"
         />
       </div>
-      <FandQAccordion FandQs = {FandQs} />
+      <FandQAccordion data = {FandQs} />
     </>
   );
 }

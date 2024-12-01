@@ -42,13 +42,14 @@ function App() {
 
   const { topAlbums = [], newAlbums = [], songs = [], genres = [], FandQs = [] } = data;
 
-  console.log("FandQs",FandQs);
+  // console.log("topAlbums from app",topAlbums);
+  console.log("FandQs from app",FandQs);
 
   return (
     <>
       <StyledEngineProvider injectFirst>
         <Navbar searchData={[...topAlbums, ...newAlbums]} />
-        <Outlet context={{ data: { topAlbums, newAlbums, songs, genres } }} />
+        <Outlet context={{ data: { topAlbums, newAlbums, songs, genres, FandQs } }} />
       </StyledEngineProvider>
     </>
   );
