@@ -15,7 +15,7 @@ import { fetchFAndQs } from "../../api/api";
 
 function Content (data, idx){
   return (
-    <div>
+    <div className='containner-box'>
       <Accordion className={styles.size}>
         <AccordionSummary
           expandIcon={<ArrowDownwardIcon />}
@@ -43,17 +43,48 @@ export default function FandQAccordion(FandQs) {
 
   console.log("FandQs from the FandQacc", FandQs);
 
-  const response = FandQs.data
+  const response = FandQs.data.data
   console.log("data in response",response);
 
   return (
-    <div className={styles.AllignItem}>
-        <h1>FAQs</h1>
-        {Array.isArray(FandQs) &&
-        FandQs.map((element, idx) => {
-          return Content(element, idx)
-        })}
-        
+    <div>
+      <div className={styles.AllignItem}>
+          <h1>FAQs</h1>
+          {Array.isArray(response) &&
+          response.map((element, idx) => {
+            // return Content(element,idx)
+
+            return (
+              <>
+                <div className={styles.containnerbox}>
+                  <Accordion className={styles.size}>
+                    <AccordionSummary
+                      expandIcon={<ArrowDownwardIcon />}
+                      aria-controls={`panel${idx}-content`}
+                      id={`panel${idx}-header`}
+                      className={styles.question}
+                    >
+                      <Typography>
+                        {element.question}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography
+                        className={styles.answer}
+                      >
+                        {element.answer}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </div>
+              </>
+            )
+
+          })}
+          
+      </div>
+
     </div>
+
   );
 }

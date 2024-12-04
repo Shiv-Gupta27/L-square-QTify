@@ -5,6 +5,7 @@ import Hero from "../../Components/Hero/Hero";
 import Section from "../../Components/Section/Section";
 import styles from "./HomePage.module.css";
 import FandQAccordion from "../../Components/FandQAccordion/FandQAccordion"
+import Songplayer from "../../Components/Songplayer/Songplayer";
 
 export default function HomePage() {
   const { data } = useOutletContext();
@@ -27,6 +28,8 @@ export default function HomePage() {
         />
       </div>
       <FandQAccordion data = {FandQs} />
+      <hr className={styles.horizontal}/>
+      <Songplayer />
     </>
   );
 }
