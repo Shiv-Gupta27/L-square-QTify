@@ -1,6 +1,6 @@
 .AllignItem {
     width: 100%;  
-    height: 80px;  
+    /* height: 80px;   */
     display: flex; 
     flex-direction: column;
     align-content: center;
