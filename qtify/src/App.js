@@ -40,6 +40,8 @@ function App() {
     
   }, []);
 
+  console.log("data from the app.js ",data);
+
   const { topAlbums = [], newAlbums = [], songs = [], genres = [], FandQs = [] } = data;
 
   // console.log("topAlbums from app",topAlbums);

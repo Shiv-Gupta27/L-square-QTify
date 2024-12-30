@@ -1,1 +1,37 @@
+.parentDiv{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
 
+.imagedis{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.playaudio{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin-right: 10%;
+
+}
+
+.playaudio img {
+    width: 40px;
+    height: 40px;
+}
+
+.childDiv{
+    display: flex;
+    width: 100%; 
+    justify-content: space-between;
+}

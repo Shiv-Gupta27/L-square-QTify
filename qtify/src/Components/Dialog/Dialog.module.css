@@ -1,0 +1,22 @@
+.Btn {
+    background-color: var(--color-black);
+    color: var(--color-primary);
+    border-radius: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+
+.SubmitBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.Action{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}

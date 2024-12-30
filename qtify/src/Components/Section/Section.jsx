@@ -17,7 +17,7 @@ export default function Section({ title, data, filterSource, type }) {
 
   useEffect(() => {
     if (filterSource) {
-      filterSource().then((response) => {
+      filterSource().then((response) => { 
         const { data } = response;
         setFilters([...filters, ...data]);
       });

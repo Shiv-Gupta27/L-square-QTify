@@ -42,5 +42,5 @@
   
   .chip {
     background-color: var(--color-black);
-    color: white;
+    color:var(--color-white);
   }

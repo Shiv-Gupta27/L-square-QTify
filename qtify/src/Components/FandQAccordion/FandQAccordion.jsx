@@ -13,31 +13,31 @@ import { fetchFAndQs } from "../../api/api";
 
 
 
-function Content (data, idx){
-  return (
-    <div className='containner-box'>
-      <Accordion className={styles.size}>
-        <AccordionSummary
-          expandIcon={<ArrowDownwardIcon />}
-          aria-controls={`panel${idx}-content`}
-          id={`panel${idx}-header`}
-          className={styles.question}
-        >
-          <Typography>
-            {data.question}
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography
-            className={styles.answer}
-          >
-            {data.answer}
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </div>
-  )
-}
+// function Content (data, idx){
+//   return (
+//     <div className='containner-box'>
+//       <Accordion className={styles.size}>
+//         <AccordionSummary
+//           expandIcon={<ArrowDownwardIcon />}
+//           aria-controls={`panel${idx}-content`}
+//           id={`panel${idx}-header`}
+//           className={styles.question}
+//         >
+//           <Typography>
+//             {data.question}
+//           </Typography>
+//         </AccordionSummary>
+//         <AccordionDetails>
+//           <Typography
+//             className={styles.answer}
+//           >
+//             {data.answer}
+//           </Typography>
+//         </AccordionDetails>
+//       </Accordion>
+//     </div>
+//   )
+// }
 
 export default function FandQAccordion(FandQs) {
 
@@ -59,7 +59,7 @@ export default function FandQAccordion(FandQs) {
                 <div className={styles.containnerbox}>
                   <Accordion className={styles.size}>
                     <AccordionSummary
-                      expandIcon={<ArrowDownwardIcon />}
+                      expandIcon={<span className={styles.colorArrow}><ArrowDownwardIcon /></span>}
                       aria-controls={`panel${idx}-content`}
                       id={`panel${idx}-header`}
                       className={styles.question}

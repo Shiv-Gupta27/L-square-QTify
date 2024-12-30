@@ -32,21 +32,24 @@ function Card({ data, type }) {
       }
       case "song": {
         const { image, likes, title } = data;
+        console.log("to check slug value for the song", data);
 
         return (
-          <div className={styles.wrapper}>
-            <div className={styles.card}>
-              <img src={image} alt="song" loading="lazy" />
-              <div className={styles.banner}>
-                <div className={styles.pill}>
-                  <p>{likes} Likes</p>
+          // <Link to={`/album/${slug}`}>
+            <div className={styles.wrapper}>
+              <div className={styles.card}>
+                <img src={image} alt="song" loading="lazy" />
+                <div className={styles.banner}>
+                  <div className={styles.pill}>
+                    <p>{likes} Likes</p>
+                  </div>
                 </div>
               </div>
+              <div className={styles.titleWrapper}>
+                <p>{title}</p>
+              </div>
             </div>
-            <div className={styles.titleWrapper}>
-              <p>{title}</p>
-            </div>
-          </div>
+          // </Link>
         );
       }
       default:
